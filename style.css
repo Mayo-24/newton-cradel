@@ -1,0 +1,76 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  align-items: center;
+  background-color: #09090A;
+}
+.cradel{
+  width: 20rem;
+  height: 20rem;
+  background-color: transparent;
+  border-top: 0.8rem solid red;
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.3rem;
+  
+}
+div{
+  width: 0.4rem;
+  height: 10rem;
+  background-color: red;
+   position: relative;
+}
+.cradel div::before {
+  content: "";
+  position: absolute;
+  left:-0.7rem ;
+  top:9rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  background-color: red;
+}
+.cradel div:first-child{
+  animation: left-spin 2s linear infinite;
+  transform-origin: top right
+}
+@keyframes left-spin{
+  0%{
+    rotate:0deg;
+  }
+  25%{
+    rotate:20deg;
+  }
+  50%{
+    rotate:0deg;
+  }
+  100%{
+    rotate:0deg;
+  }
+}
+  .cradel div:last-child{
+  animation: right-spin 2s linear 1s infinite;
+  transform-origin: top left;
+}
+@keyframes right-spin{
+  0%{
+    rotate:0deg;
+  }
+  25%{
+    rotate:-20deg;
+  }
+  50%{
+    rotate:0deg;
+  }
+  100%{
+    rotate:0deg;
+  }
+}
